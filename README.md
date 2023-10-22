@@ -9,7 +9,7 @@ Attempt at building a SaaS solution to generating a personal portfolio website. 
 - Deploy: Heroku & Vercel
 
 ## General Overview
-Not the most accurate representatin/ plan. Likely to be changed.
+Not the most accurate representation/ plan. Likely to be changed.
 
 ![Architecture](architecture.png)
 
