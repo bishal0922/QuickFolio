@@ -132,7 +132,7 @@ const PortfolioForm = () => {
 
   const renderBulletPoints = (experience, experienceIndex) => {
     return experience.bulletPoints.map((point, index) => (
-      <Box key={index} display="flex" alignItems="center" mb={1}>
+        <Box key={index} display="flex" alignItems="center" mt={1}>
         <TextField
           fullWidth
           label={`Bullet Point ${index + 1}`}
