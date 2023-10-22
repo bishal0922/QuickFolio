@@ -1,6 +1,6 @@
 # QuickFolio
 
-Attempt at building a SaaS solution to genearting personal portfolio website. Currently deployed through vercel. Will be developing the backend in the few weeks.
+Attempt at building a SaaS solution to generating a personal portfolio website. Currently deployed through vercel. Will be developing the backend in the upcoming days/ weeks.
 
 ### Stack
 - FE: React JS w/ Material UI
@@ -9,6 +9,7 @@ Attempt at building a SaaS solution to genearting personal portfolio website. Cu
 - Deploy: Heroku & Vercel
 
 ## General Overview
+Not the most accurate representatin/ plan. Likely to be changed.
 
 ![Architecture](architecture.png)
 
