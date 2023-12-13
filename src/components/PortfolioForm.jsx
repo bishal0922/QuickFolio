@@ -1,32 +1,8 @@
 import React, { useState } from "react";
-import { Button, TextField, Container, Typography, Box, CircularProgress, Snackbar, Alert, Select, MenuItem, Paper } from "@mui/material";
-import { styled } from '@mui/system';
+import { Button, TextField,  Typography, Box, CircularProgress, Snackbar, Alert, Select, MenuItem}  from "@mui/material";
+import ExperienceSection from "./ExperienceSection";
+import { StyledContainer, StyledPaper, HeaderTypography, StyledButton } from "./Styles";
 
-const StyledContainer = styled(Container)(({ theme }) => ({
-    padding: theme.spacing(4),
-    borderRadius: '8px',
-}));
-
-const StyledPaper = styled(Paper)(({ theme }) => ({
-    backgroundColor: '#ffffff',  // Pure white to contrast against the softer background
-    padding: theme.spacing(2),
-    marginBottom: theme.spacing(3),
-    boxShadow: '0 2px 4px 0 rgba(0, 0, 0, .08)'  // Minimal shadow for a subtle lift effect
-}));
-
-const HeaderTypography = styled(Typography)(({ theme }) => ({
-    color: '#333',  // Dark grey for headers
-    marginBottom: theme.spacing(2),
-    fontWeight: '500'
-}));
-
-const StyledButton = styled(Button)(({ theme }) => ({
-    backgroundColor: '#667eea',  // Soft blue for call-to-action buttons
-    color: 'white',
-    '&:hover': {
-        backgroundColor: '#5a6fcf'  // A slightly darker blue for hover
-    }
-}));
 
 const PortfolioForm = () => {
     
@@ -130,22 +106,7 @@ const PortfolioForm = () => {
     }));
   };
 
-  const renderBulletPoints = (experience, experienceIndex) => {
-    return experience.bulletPoints.map((point, index) => (
-        <Box key={index} display="flex" alignItems="center" mt={1}>
-        <TextField
-          fullWidth
-          label={`Bullet Point ${index + 1}`}
-          variant="outlined"
-          value={point}
-          onChange={(e) => handleBulletPointChange(e, experienceIndex, index)}
-        />
-        {experience.bulletPoints.length - 1 === index && (
-          <Button onClick={() => addBulletPoint(experienceIndex)}>+</Button>
-        )}
-      </Box>
-    ));
-  };
+
 
 /*
 EXPERIENCE ENDS
@@ -241,7 +202,7 @@ const handleKeyDown = (e) => {
 
 
         {/* Insert the Experience Rendering Here */}
-         <StyledPaper elevation={3} style={{ padding: '15px', marginBottom: '20px' }}>
+         {/* <StyledPaper elevation={3} style={{ padding: '15px', marginBottom: '20px' }}>
                 <HeaderTypography variant="h6" gutterBottom>
                     Experience
                 </HeaderTypography>
@@ -265,7 +226,14 @@ const handleKeyDown = (e) => {
         >
           Add More Experience
         </Button>{" "}
-        </StyledPaper>
+        </StyledPaper> */}
+        <ExperienceSection 
+    experiences={formData.experiences} 
+    handleExperienceChange={handleExperienceChange}
+    handleBulletPointChange={handleBulletPointChange}
+    addBulletPoint={addBulletPoint}
+    addExperience={addExperience}
+/>
 
 
  
